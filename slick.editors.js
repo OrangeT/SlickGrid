@@ -15,7 +15,8 @@
         "YesNoSelect": YesNoSelectEditor,
         "Checkbox": CheckboxEditor,
         "PercentComplete": PercentCompleteEditor,
-        "LongText": LongTextEditor
+        "LongText": LongTextEditor,
+        "DropDown": DropDownEditor
       }
     }
   });
@@ -508,5 +509,82 @@
     };
 
     this.init();
-  }
+}
+    
+// Appetere modified BEGIN
+// Addition of custom editors
+
+// TODO DOCUMENT THE DROPDOWN'S OPTIONS 
+function DropDownEditor(args) {
+    var $select;
+    var scope = this;
+
+    var templateId = args.column.dropDownOptions.templateId;
+    var valueField = args.column.dropDownOptions.valueField;
+    var textField = args.column.dropDownOptions.textField;
+
+    var dropDownWidth;
+    if (args.column.width) {
+        // TODO GET PADDING (4+4=8) DYNAMICALLY?
+        // TODO ENSURE MINIMUM WIDTH?
+        dropDownWidth = args.column.width - 8;
+    }
+
+    this.init = function () {
+        // TODO CHECK EFFECT OF DUPLICATE ID
+        $select = $('#' + templateId).clone().attr("id", new Date().getTime());
+
+        if (dropDownWidth) {
+            $select.css("width", dropDownWidth);
+        }
+
+        $select.appendTo(args.container);
+
+        $select.focus().select();
+    };
+
+    this.destroy = function () {
+        $select.remove();
+    };
+
+    this.focus = function () {
+        $select.focus();
+    };
+
+    this.loadValue = function (item) {
+
+        var currentValue = item[valueField];
+
+        if (currentValue) {
+            $select.val(currentValue);
+            $select.select();
+        }
+    };
+
+    this.serializeValue = function () {
+        return ({
+            value: $select.val(),
+            text: $select.children("option:selected").text()
+        });
+    };
+
+    this.applyValue = function (item, state) {
+        item[valueField] = state["value"];
+        item[textField] = state["text"];
+    };
+
+    this.isValueChanged = function () {
+        return ($select.val() != args.item[valueField]);
+    };
+
+    this.validate = function () {
+        return {
+            valid: true,
+            msg: null
+        };
+    };
+
+    this.init();
+}    
+
 })(jQuery);
