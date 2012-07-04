@@ -2317,6 +2317,10 @@ if (typeof Slick === "undefined") {
     }
 
     function scrollRowIntoView(row, doPaging) {
+      // Appetere modified BEGIN
+      // Never use paging, so up/down only scrolls to next row, rather than jumping a whole page
+      doPaging = false; 
+      // Appetere modified END
       var rowAtTop = row * options.rowHeight;
       var rowAtBottom = (row + 1) * options.rowHeight - viewportH + (viewportHasHScroll ? scrollbarDimensions.height : 0);
 
