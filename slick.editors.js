@@ -312,7 +312,10 @@
     };
 
     this.serializeValue = function () {
-      return $select.attr("checked");
+        // Appetere modified BEGIN
+        //return $select.attr("checked");
+        return $select.attr("checked") ? true : false;
+        // Apppetere modified END
     };
 
     this.applyValue = function (item, state) {
