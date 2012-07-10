@@ -55,11 +55,7 @@
   // Modified formatters
 
   function CheckmarkFormatter(row, cell, value, columnDef, dataContext) {
-
-      // TODO WORK OUT BEST PATH TO IMAGE - STARTS WITH PATH OF PAGE SCRIPT IS BEING USED IN
-      // PATH STARTING WITH / NOT IDEAL AS WILL FAIL WITH VIRTUAL DIRECTORY
-      /*return value ? "<img src='../images/tick.png'>" : "";*/
-      return value ? "<img src='/SlickGrid/images/tick.png'>" : "";
+      return value ? "<div class='greenTick'></div>" : "<div class='redCross'></div>";
   }
 
   // Additional formatters
