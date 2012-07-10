@@ -1,0 +1,180 @@
+/* Slick Grid
+-----------------------------------------------------------*/
+#gridContainer {
+    background: white;
+    border: 1px solid gray;
+    font-size: 0.6em;
+    height:500px;
+    margin-top: 10px;
+    outline: 0;
+    width: 100%;
+}
+#gridStatus {
+    color: red;
+}
+.grid-header {
+    background: url('images/header-bg.gif') repeat-x center top;
+    border: 1px solid gray;
+    border-bottom: 0;
+    border-top: 0;
+    color: black;
+    height: 24px;
+    line-height: 24px;
+}
+.grid-header label {
+    display: inline-block;
+    font-weight: bold;
+    margin: auto auto auto 6px;
+}
+.loading-indicator {
+    background: white;
+    border: 1px solid red;
+    color: black;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px;
+    z-index: 9999;
+    -moz-border-radius: 10px;
+    -moz-box-shadow: 0 0 5px red;
+    -opacity: 0.5;
+    -text-shadow: 1px 1px 1px white;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px red;
+ }
+
+.loading-indicator label {
+    background: url(images/ajax-loader-small.gif) no-repeat center left;
+    padding-left: 20px;
+}
+/* Slick.Editors.Text*/
+input.editor-text {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+}
+.productRow .slick-cell
+{
+    color: white;
+    background-color: #8FC157;
+}
+.greenTick {
+    background: url('images/tick.png') no-repeat;
+    height: 16px;
+    width: 16px;
+}
+.redCross {
+    background: url('images/RedCross.png') no-repeat;
+    height: 16px;
+    width: 16px;
+}
+/* 
+Styles below based on SlickGrid/examples/slick-default-theme.css 
+*/
+/*
+IMPORTANT:
+In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+classes should alter those!
+*/
+
+.slick-header-columns {
+  background: url('images/header-columns-bg.gif') repeat-x center bottom;
+  border-bottom: 1px solid silver;
+}
+
+.slick-header-column {
+  background: url('images/header-columns-bg.gif') repeat-x center bottom;
+  border-right: 1px solid silver;
+}
+
+.slick-header-column:hover, .slick-header-column-active {
+  background: white url('images/header-columns-over-bg.gif') repeat-x center bottom;
+}
+
+.slick-headerrow {
+  background: #fafafa;
+}
+
+.slick-headerrow-column {
+  background: #fafafa;
+  border-bottom: 0;
+  height: 100%;
+}
+
+.slick-row.ui-state-active {
+  background: #F5F7D7;
+}
+
+.slick-row {
+  position: absolute;
+  background: white;
+  border: 0px;
+  line-height: 20px;
+}
+
+.slick-row.selected {
+  z-index: 10;
+  background: #DFE8F6;
+}
+
+.slick-cell {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.slick-group {
+  border-bottom: 2px solid silver;
+}
+
+.slick-group-toggle {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+}
+
+.slick-group-toggle.expanded {
+  background: url(images/collapse.gif) no-repeat center center;
+}
+
+.slick-group-toggle.collapsed {
+  background: url(images/expand.gif) no-repeat center center;
+}
+
+.slick-group-totals {
+  color: gray;
+  background: white;
+}
+
+.slick-cell.selected {
+  background-color: beige;
+}
+
+.slick-cell.active {
+  border-color: black;
+  border-style: solid;
+}
+
+.slick-sortable-placeholder {
+  background: silver !important;
+}
+
+.slick-row.odd {
+  background: #fafafa;
+}
+
+.slick-row.ui-state-active {
+  background: #F5F7D7;
+}
+
+.slick-row.loading {
+  opacity: 0.5;
+  filter: alpha(opacity = 50);
+}
+
+.slick-cell.invalid {
+  border-color: red;
+}
