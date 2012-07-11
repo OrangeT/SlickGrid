@@ -313,7 +313,6 @@
 
         this.serializeValue = function () {
             // Appetere modified BEGIN
-            //return $select.attr("checked");
             return $select.attr("checked") ? true : false;
             // Apppetere modified END
         };
@@ -323,7 +322,9 @@
         };
 
         this.isValueChanged = function () {
-            return ($select.attr("checked") != defaultValue);
+            // Appetere modified BEGIN
+            return (($select.attr("checked") ? true : false) != defaultValue);
+            // Apppetere modified END
         };
 
         this.validate = function () {
