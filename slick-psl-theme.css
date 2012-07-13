@@ -99,10 +99,11 @@ classes should alter those!
   background: #fafafa;
 }
 
-.slick-headerrow-column {
-  background: #fafafa;
-  border-bottom: 0;
-  height: 100%;
+.slick-headerrow-column
+{
+    background: #EFE7B1;
+    border-bottom: 0;
+    height: 100%;
 }
 
 .slick-row.ui-state-active {
