@@ -85,7 +85,12 @@
 
     function ActionButtonsFormatter(row, cell, value, columnDef, dataContext) {
 
-        var buttonsHtml="";
+        var showActions = value;
+        if (!showActions) {
+            return null;
+        }
+
+        var buttonsHtml = "";
 
         if (dataContext.add) {
             buttonsHtml += GetButtonHtml("Add", "addButton");
@@ -95,7 +100,7 @@
             buttonsHtml += GetButtonHtml("Save", "saveButton");
 
         }
-        
+
         if (dataContext.cancel) {
             buttonsHtml += GetButtonHtml("Cancel", "cancelButton");
         }
