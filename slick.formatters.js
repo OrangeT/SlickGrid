@@ -14,7 +14,6 @@
                 "YesNo": YesNoFormatter,
                 "Checkmark": CheckmarkFormatter,
                 "DropDown": DropDownFormatter,
-                "Button": ButtonFormatter,
                 "ActionButtons": ActionButtonsFormatter
             }
         }
@@ -63,24 +62,6 @@
 
     function DropDownFormatter(row, cell, value, columnDef, dataContext) {
         return dataContext[columnDef.dropDownOptions.textField];
-    }
-
-    function ButtonFormatter(row, cell, value, columnDef, dataContext) {
-        // TODO REFACTORING HARD-CODING OUT (USED FOR SPEED WHILE PREPARING FOR DEMO)
-        var className;
-
-        if (!value) {
-            // Add default for new row
-            value = "Save";
-        }
-
-        if (value === "Save") {
-            className = "saveButton";
-        } else {
-            className = "addButton";
-        }
-
-        return "<button type='button' class='" + className + "'>" + value + "</button>";
     }
 
     function ActionButtonsFormatter(row, cell, value, columnDef, dataContext) {
