@@ -56,6 +56,12 @@ input.editor-text {
     padding: 0;
     width: 100%;
 }
+input.editor-checkbox {
+  margin: 0 5px 0 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+}
 .productRow .slick-cell
 {
     color: white;
@@ -64,11 +70,13 @@ input.editor-text {
 .greenTick {
     background: url('images/tick.png') no-repeat;
     height: 16px;
+    margin-right: 5px;
     width: 16px;
 }
 .redCross {
     background: url('images/RedCross.png') no-repeat;
     height: 16px;
+    margin-right: 5px;
     width: 16px;
 }
 /* 

@@ -590,5 +590,4 @@
 
         this.init();
     }
-
 })(jQuery);
