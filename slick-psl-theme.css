@@ -57,7 +57,7 @@ input.editor-text {
     width: 100%;
 }
 input.editor-checkbox {
-  margin: 0 5px 0 0;
+  margin: 3px 5px 0 0;
   height: 100%;
   padding: 0;
   border: 0;
