@@ -62,10 +62,20 @@ input.editor-checkbox {
   padding: 0;
   border: 0;
 }
+.childQuotePriceRow .slick-cell
+{
+    background-color: #F5F5F5;
+    color: gray;
+}
 .productRow .slick-cell
 {
     color: white;
     background-color: #8FC157;
+}
+.editableCell
+{
+    color: #000000;
+    background-color: #DDECCC;
 }
 .greenTick {
     background: url('images/tick.png') no-repeat;
