@@ -181,10 +181,6 @@ classes should alter those!
   background: silver !important;
 }
 
-.slick-row.odd {
-  background: #fafafa;
-}
-
 .slick-row.ui-state-active {
   background: #F5F7D7;
 }
