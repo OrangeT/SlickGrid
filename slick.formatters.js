@@ -12,9 +12,7 @@
                 "PercentComplete": PercentCompleteFormatter,
                 "PercentCompleteBar": PercentCompleteBarFormatter,
                 "YesNo": YesNoFormatter,
-                "Checkmark": CheckmarkFormatter,
-                "DropDown": DropDownFormatter,
-                "ActionButtons": ActionButtonsFormatter
+                "Checkmark": CheckmarkFormatter
             }
         }
     });
@@ -56,41 +54,6 @@
 
     function CheckmarkFormatter(row, cell, value, columnDef, dataContext) {
         return value ? "<div class='greenTick'></div>" : "<div class='redCross'></div>";
-    }
-
-    // Additional formatters
-
-    function DropDownFormatter(row, cell, value, columnDef, dataContext) {
-        return dataContext[columnDef.dropDownOptions.textField];
-    }
-
-    function ActionButtonsFormatter(row, cell, value, columnDef, dataContext) {
-
-        var showActions = value;
-        if (!showActions) {
-            return null;
-        }
-
-        var buttonsHtml = "";
-
-        if (dataContext.add) {
-            buttonsHtml += GetButtonHtml("Add", "addButton");
-        }
-
-        if (dataContext.save) {
-            buttonsHtml += GetButtonHtml("Save", "saveButton");
-
-        }
-
-        if (dataContext.cancel) {
-            buttonsHtml += GetButtonHtml("Cancel", "cancelButton");
-        }
-
-        return buttonsHtml;
-    }
-
-    function GetButtonHtml(value, className) {
-        return "<button type='button' class='" + className + "'>" + value + "</button>";
     }
 
 })(jQuery);
