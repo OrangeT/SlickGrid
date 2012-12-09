@@ -1,6 +1,6 @@
 /* Slick Grid
 -----------------------------------------------------------*/
-#gridContainer{
+#gridContainer, .gridContainer{
     background: white;
     border: 1px solid gray;
     font-size: 0.7em !important; /* Make more important than .ui-widget .ui-widget */
@@ -9,7 +9,7 @@
     outline: 0;
     width: 100%;
 }
-#gridStatus {
+#gridStatus, .gridStatus {
     color: red;
 }
 /*.grid-header {
