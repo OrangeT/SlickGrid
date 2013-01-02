@@ -103,7 +103,7 @@ classes should alter those!
   border-bottom: 1px solid silver;
 }
 
-.slick-header-column {
+.slick-header-column.ui-state-default {
   background: url('images/header-columns-bg.gif') repeat-x center bottom;
   border-right: 1px solid silver;
 }
@@ -112,11 +112,11 @@ classes should alter those!
   background: white url('images/header-columns-over-bg.gif') repeat-x center bottom;
 }
 
-.slick-headerrow {
+.slick-headerrow.ui-state-default {
   background: #fafafa;
 }
 
-.slick-headerrow-column
+.slick-headerrow-column.ui-state-default
 {
     background: #EFE7B1;
     border-bottom: 0;
